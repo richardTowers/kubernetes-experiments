@@ -13,8 +13,8 @@ minikube stop  # Stops the local k8s cluster
 ```
 
 ```
-minkube addons list # Lists the addons
-minkube addons open dashboard # Opens the dashboard
+minikube addons list # Lists the addons
+minikube addons open dashboard # Opens the dashboard
 ```
 
 ## Managing containers
@@ -22,5 +22,24 @@ minkube addons open dashboard # Opens the dashboard
 ```
 kubectl get pods # List the pods
 kubectl get services # List the services
+```
+
+## Managing deployments
+
+```
+kubectl create -f hello-node-deployment.yml # Creates a deployment
+kubectl get deployment # Lists deployments
+
+# Scale deployment
+kubectl scale deployment hello-node-deployment --replicas 5
+```
+
+## Managing services
+
+```
+kubectl create -f service.yml # Create a service
+kubectl get services # List services
+kubectl delete svc/hello-node-service # Delete a service
+minikube service hello-node-service --url # Get the URL
 ```
 

@@ -1,0 +1,15 @@
+* Kubernetes Plan
+
+- Get verify-frontend / stub-api running
+- Deploy to GKE
+- Get verify-service-provider running (work out how to deploy app config / fed config - config maps?)
+- Deploy to GKE
+- Get passport-verify-stub-relying-party running
+- Deploy to GKE
+- Get verify-matching-service-adapter running
+- Get verify-local-matching-service-example running
+- Deploy to GKE
+- Get saml-proxy running
+- Get other saml services running
+- Deploy to GKE
+  

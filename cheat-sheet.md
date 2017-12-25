@@ -12,6 +12,7 @@ minikube start # Starts the local k8s cluster
 minikube stop  # Stops the local k8s cluster
 
 eval $(minikube docker-env) # Set up docker to build in the minikube host
+eval $(minikube docker-env -u) # Reset docker
 ```
 
 ## Addons

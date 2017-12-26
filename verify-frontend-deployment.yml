@@ -11,8 +11,8 @@ spec:
     spec:
       containers:
         - name: 'verify-frontend'
-          image: 'verify-frontend:latest'
-          imagePullPolicy: Never
+          image: 'eu.gcr.io/verify-frontend-kubernetes/verify-frontend'
+          imagePullPolicy: IfNotPresent
           ports:
             - containerPort: 50300
           env:

@@ -11,7 +11,8 @@ spec:
     spec:
       containers:
         - name: 'verify-stub-api'
-          image: 'verify-stub-api:latest'
-          imagePullPolicy: Never
+          image: 'eu.gcr.io/verify-frontend-kubernetes/verify-stub-api'
+          imagePullPolicy: IfNotPresent
           ports:
             - containerPort: 8080
+

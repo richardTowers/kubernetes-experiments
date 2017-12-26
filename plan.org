@@ -3,7 +3,9 @@
 ** DONE Get verify-frontend / stub-api running
 CLOSED: [2017-12-25 Mon 08:51]
 
-** TODO Deploy to GKE
+** DONE Deploy to GKE
+CLOSED: [2017-12-26 Tue 22:45]
+
 ** TODO Get verify-service-provider running (work out how to deploy app config / fed config - config maps?)
 ** TODO Deploy to GKE
 ** TODO Get passport-verify-stub-relying-party running

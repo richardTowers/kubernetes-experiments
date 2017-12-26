@@ -13,6 +13,8 @@ minikube stop  # Stops the local k8s cluster
 
 eval $(minikube docker-env) # Set up docker to build in the minikube host
 eval $(minikube docker-env -u) # Reset docker
+
+gcloud container clusters resize verify-frontend --zone=europe-west1-c --size=0
 ```
 
 ## Addons
@@ -46,5 +48,8 @@ kubectl create -f service.yml # Create a service
 kubectl get services # List services
 kubectl delete svc/hello-node-service # Delete a service
 minikube service hello-node-service --url # Get the URL
+
+# Open verify-frontend
+open -a 'Google Chrome' "$(minikube service verify-frontend-service --url)/test-saml"
 ```
 

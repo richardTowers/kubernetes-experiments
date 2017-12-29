@@ -2,7 +2,7 @@ Kubernetes Experiments
 ======================
 
 <div>
-<img src="https://cdn.rawgit.com/kubernetes/kubernetes/13c80a99/logo/logo.svg" width="300">
+<img src="https://cdn.rawgit.com/kubernetes/kubernetes/13c80a99/logo/logo.svg" width="200">
 </div>
 
 Repository to keep track with my findings from playing around with k8s.

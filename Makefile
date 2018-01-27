@@ -11,5 +11,5 @@ deploy: all
 	kubectl apply -f bin
 
 bin/%.yaml: src/%.dhall
-	dhall-to-yaml < $< > $@
+	dhall-to-yaml <<< "./$<" > $@
 

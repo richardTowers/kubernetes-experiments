@@ -1,7 +1,7 @@
 -- vim: syntax=haskell
 ./lib/deployment.dhall {
   name = "verify-frontend",
-  imageRepositoryPrefix = "",
+  imageRegistryPrefix = ./lib/imageRegistryPrefix.dhall,
   containerPort = 50300,
   env = [
     { name = "IDA_FRONTEND_HOST", value = "http://verify-stub-api:50199" },

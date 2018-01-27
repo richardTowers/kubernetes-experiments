@@ -1,5 +1,6 @@
 DHALL=$(wildcard src/*.dhall)
 YAML=$(addprefix bin/,$(notdir $(DHALL:.dhall=.yaml)))
+IS_GKE := "False"
 
 .PHONY: all clean deploy
 
@@ -11,5 +12,5 @@ deploy: all
 	kubectl apply -f bin
 
 bin/%.yaml: src/%.dhall
-	dhall-to-yaml <<< "./$<" > $@
+	IS_GKE=$(IS_GKE) dhall-to-yaml <<< './$<' > $@
 

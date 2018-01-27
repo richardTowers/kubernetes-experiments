@@ -18,3 +18,10 @@ which is compiled to YAML and passed to `kubectl apply`.
 Everything's tied together with a [Makefile](Makefile), so you should just be able to make changes
 to the dhall, then `make` to create the YAML, or `make deploy` to deploy to the cluster.
 
+Because there are some differences between running on GKE and Minikube
+(primarily where the docker image registry lives) you can tell dhall when
+you're pointing at GKE by passing `IS_GKE=True` to make like so:
+
+```
+make clean all IS_GKE=True
+```

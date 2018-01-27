@@ -1,7 +1,7 @@
 -- vim: syntax=haskell
 λ(args: {
   name: Text,
-  imageRepositoryPrefix: Text,
+  imageRegistryPrefix: Text,
   containerPort: Integer,
   env: List { name: Text, value: Text }
 }) →
@@ -18,7 +18,7 @@
       spec = {
         containers = [{
             name = "${args.name}",
-            image = "${args.imageRepositoryPrefix}${args.name}",
+            image = "${args.imageRegistryPrefix}${args.name}",
             imagePullPolicy = "IfNotPresent",
             ports = [{ containerPort = args.containerPort }],
             env = args.env
